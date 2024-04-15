@@ -1,5 +1,5 @@
 import click
-import sqlite3
+import RealFakeDoors
 
 
 @click.command()
@@ -11,34 +11,15 @@ import sqlite3
 @click.option('--database', '-d',
               type=str,
               required=False,
-              default='index',
+              default='users',
               help='connect to geven database')
-@click.option('--inport', '-i',
+@click.option('--cvs',
               type=str,
               required=False,
               default='index',
               help='import data from a given csv')
-def rfd(run, database):
-    conn = sqlite3.connect(f'Database/{database}.db')
-
-    # Create a cursor object to interact with the database
-    cursor = conn.cursor()
-
-    # Read SQL script from a file
-    with open(f'sqlite-test/{run}.sql', 'r') as file:
-        sql_script = file.read()
-
-    # Execute the SQL script
-    results = cursor.execute(sql_script).fetchall()
-
-    # Write the results to a text file
-    with open('sqlite-test/results.txt', 'w') as output_file:
-        for row in results:
-            output_file.write(str(row) + '\n')
-
-    conn.commit()
-    cursor.close()
-    conn.close()
+def rfd(run, database, csv):
+    RealFakeDoors.run_sql_script(run, database)
 
 
 if __name__ == '__main__':
