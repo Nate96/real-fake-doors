@@ -17,20 +17,22 @@ U2F3 - The system shall add new entries to the database when given a CSV file
 U2F4 - The system shall remove duplicate entries when adding new data to the database
 
 U3F4 - The system shall export query results to a txt file with the following format
-	COLOM-NAME:
-	column content
-	COLOM-NAME:
-	column content
-	COLOM-NAME:
-	column content
-	 ---
+
+COLOM-NAME:
+column content
+COLOM-NAME:
+column content
+COLOM-NAME:
+column content
+
 
 U3F5 - The system shall export query results to an MD file with the following format
-	# row-number 	
-	## COLOM-NAME:
-	column content
-	## COLOM-NAME:
-	column content
-	## COLOM-NAME:
-	column content
-	 ---
+	
+# row-number 	
+## COLOM-NAME:
+column content
+## COLOM-NAME:
+column content
+## COLOM-NAME:
+column content
+
