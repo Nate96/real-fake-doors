@@ -19,10 +19,15 @@ U2F4 - The system shall remove duplicate entries when adding new data to the dat
 U3F4 - The system shall export query results to a txt file with the following format
 
 COLOM-NAME:
+
 column content
+
 COLOM-NAME:
+
 column content
+
 COLOM-NAME:
+
 column content
 
 
